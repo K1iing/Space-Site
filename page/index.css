@@ -12,11 +12,13 @@ body {
 .pai {
     display: flex;
     justify-content: center;
-    
+
 
 }
 
-
+ul {
+    margin-top: 35px;
+}
 
 
 ul a {
@@ -26,9 +28,10 @@ ul a {
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    justify-content: space-around;
     transition: color 0.3s, background-color 0.3s; 
+    margin: 89px;
     
+   
 }
 
 ul a:hover {
@@ -108,6 +111,7 @@ background: DarkSlateBlue;
 
 
 .lua {
+    display: flex;
     animation: flutuar 5s ease-in-out infinite;
     /* Altere a duração conforme necessário */
   }
@@ -126,4 +130,9 @@ background: DarkSlateBlue;
     100% {
       transform: translateY(0px);
     }
+  }
+
+  .lua {
+    justify-content: center;
+    position: relative;
   }
