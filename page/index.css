@@ -26,8 +26,13 @@ ul a {
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-
+    justify-content: space-around;
+    transition: color 0.3s, background-color 0.3s; 
     
+}
+
+ul a:hover {
+    color: DarkSlateBlue;
 }
 
 
@@ -45,6 +50,7 @@ ul a {
     margin: 0%;
     margin-top: 5px;
     z-index: 1;
+    transition: color 0.3s ease;
 }
 
 .pagrafobaixo {
@@ -73,7 +79,7 @@ ul a {
 }
 
 .botaobranco:hover {
-background: grey;
+background: DarkSlateBlue;
 }
 
 .botaoexplore {
@@ -100,7 +106,24 @@ background: grey;
 
 }
 
-.lua {
- 
 
-}
+.lua {
+    animation: flutuar 5s ease-in-out infinite;
+    /* Altere a duração conforme necessário */
+  }
+  
+
+  @keyframes flutuar {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+      /* Altere o valor conforme necessário */
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
