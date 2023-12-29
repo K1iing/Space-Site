@@ -9,15 +9,12 @@ body {
 
 }
 
-.pai {
-    display: flex;
-    justify-content: center;
-
-
-}
 
 ul {
     margin-top: 35px;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
 }
 
 
@@ -29,7 +26,7 @@ ul a {
     font-style: normal;
     font-weight: 600;
     transition: color 0.3s, background-color 0.3s; 
-    margin: 89px;
+    
     
    
 }
@@ -95,18 +92,18 @@ background: DarkSlateBlue;
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
-    transition: color 0.3s, background-color 0.3s; /* Transição suave de cores */
+    transition: color 0.3s, background-color 0.3s; 
 }
 
 .botaoexplore:hover {
-    /* Estilos ao passar o mouse (hover) */
-    color: white; /* Cor do texto vermelha */
+  
+    color: white; 
   }
 
   .container {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; 
+    align-items: center; 
 
 }
 
@@ -114,7 +111,7 @@ background: DarkSlateBlue;
 .lua {
     display: flex;
     animation: flutuar 5s ease-in-out infinite;
-    /* Altere a duração conforme necessário */
+
   }
   
 
@@ -125,7 +122,7 @@ background: DarkSlateBlue;
   
     50% {
       transform: translateY(-20px);
-      /* Altere o valor conforme necessário */
+
     }
   
     100% {
@@ -134,7 +131,7 @@ background: DarkSlateBlue;
   }
 
   .lua {
-    /* justify-content: center; */
+
     position: absolute;
     top: 30%;
     left: 25%;
