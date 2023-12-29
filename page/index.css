@@ -51,10 +51,11 @@ ul a:hover {
     line-height: normal;
     text-align: center;
     margin: 0%;
-    margin-top: 5px;
-    z-index: 1;
+    margin-top: 200px;
+    z-index: 9;
     transition: color 0.3s ease;
 }
+
 
 .pagrafobaixo {
     color: white;
@@ -133,6 +134,11 @@ background: DarkSlateBlue;
   }
 
   .lua {
-    justify-content: center;
-    position: relative;
+    /* justify-content: center; */
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    z-index: -1;
+      
+    
   }
