@@ -94,22 +94,31 @@ body {
 .regis {
   font-family: 'Space Mono', monospace;
   margin-top: 5px;
-  color: white;
   background: grey;
   height: 40px;
   width: 120px;
   border-radius: 10px;
 
-
 }
 
+.regis a {
+  text-decoration: none;
+  color: white;
+  
+
+}
 .regis:hover {
   background-color: white;
+  transition: background-color 0.9s ease;
+}
+
+.regis a:hover {
+
   /* Cor de fundo padrão */
   color: red;
   border: none;
   cursor: pointer;
-  transition: background-color 0.9s ease;
+
   /* Adicionando uma transição suave */
 }
 
@@ -160,3 +169,4 @@ body {
   justify-content: center;
 
 }
+
