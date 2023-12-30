@@ -104,7 +104,7 @@ body {
 .regis:hover {
   background-color: rgb(17, 0, 255);
   /* Cor de fundo padrão */
-  color: grey;
+  color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.9s ease;
@@ -121,6 +121,10 @@ body {
   margin-top: 20px;
   
 }
+.links {
+  text-decoration: none;
+  color: inherit;
+}
 
 .logar:hover {
   background-color: rgb(17, 0, 255);
@@ -132,6 +136,8 @@ body {
   /* Adicionando uma transição suave */
 
 }
+
+
 
 .video-container {
   position: fixed;

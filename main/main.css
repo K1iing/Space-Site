@@ -95,7 +95,7 @@ body {
 
 .regis {
   font-family: 'Space Mono', monospace;
-  margin-top: 5px;
+  margin-top: 40px;
   background: grey;
   height: 40px;
   width: 120px;
@@ -131,19 +131,26 @@ body {
   width: 120px;
   border-radius: 10px;
   margin-top: 20px;
+
   
 }
 
-.logar:hover {
-  background-color: white;
+.logar a {
+  text-decoration: none;
+  color: white; 
+}
+
+.logar a:hover {
+  
   /* Cor de fundo padrão */
   color: blue;
   border: none;
   cursor: pointer;
   transition: background-color 0.9s ease;
   /* Adicionando uma transição suave */
-
 }
+
+
 
 .video-container {
   position: fixed;
