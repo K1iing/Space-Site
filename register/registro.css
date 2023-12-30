@@ -71,6 +71,7 @@ body {
 .entrarsenha {
   font-family: 'Space Mono', monospace;
   border-radius: 5px;
+  text-align: center;
 
 }
 
@@ -79,6 +80,7 @@ body {
 .entraremail {
   font-family: 'Space Mono', monospace;
   border-radius: 5px;
+  text-align: center;
 }
 
 
@@ -161,4 +163,5 @@ body {
 .confirmarsenha {
   font-family: 'Space Mono', monospace;
   border-radius: 5px;
+  text-align: center;
 }

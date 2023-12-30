@@ -1,32 +1,73 @@
-const botao = document.getElementById('inputRegis');
-const email = document.getElementById('emaill');
-const passwordField = document.getElementsByClassName('entrarsenha')[0];
-const passwordConfirmationField = document.getElementsByClassName('confirmarsenha')[0];
+// Função para limpar os campos do formulário
+function limparCampos(emailValido, senhaValida) {
+    const emailInput = document.getElementById('emaill');
+    const senhaInput = document.getElementById('password');
+    const senhaConfirmacaoInput = document.getElementById('passwordConfirmation');
 
-botao.addEventListener('click', function() {
-    const password = passwordField.value;
-    const passwordConfirmation = passwordConfirmationField.value;
-    const userEmail = email.value.trim(); // Remove espaços em branco antes e depois do email
-
-    const paragrafo = document.getElementById('meuParagrafo');
-    const emailValido = /\S+@\S+\.\S+/.test(userEmail); // Expressão regular para verificar o formato de email
-
-    if (password && passwordConfirmation && userEmail !== '') {
-        if (emailValido) {
-            paragrafo.textContent = 'Registrado com sucesso';
-
-            // Limpa os valores dos campos após o registro bem-sucedido
-            passwordField.value = '';
-            passwordConfirmationField.value = '';
-            email.value = ''; // Limpa o campo de e-mail
-        } else {
-            paragrafo.textContent = 'Por favor, insira um e-mail válido';
-        }
-    } else if (!password) {
-        paragrafo.textContent = 'Por favor, insira uma senha';
-    } else if (userEmail === '') {
-        paragrafo.textContent = 'Por favor, insira um e-mail';
-    } else {
-        paragrafo.textContent = 'Senha Não Confere';
+    if (!emailValido) {
+        emailInput.value = ''; // Limpa apenas o campo de email
     }
+
+    if (!senhaValida) {
+        senhaInput.value = ''; // Limpa apenas o campo de senha
+        senhaConfirmacaoInput.value = ''; // Limpa o campo de confirmação de senha
+    }
+
+    if (emailValido && senhaValida) {
+        // Limpa todos os campos se ambos email e senha estiverem corretos
+        emailInput.value = '';
+        senhaInput.value = '';
+        senhaConfirmacaoInput.value = '';
+    }
+}
+
+// Função para validar o email
+function validarEmail(email) {
+    // Expressão regular para verificar o formato do email
+    const re = /\S+@\S+\.\S+/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Função para validar o formulário
+function validarFormulario() {
+    const email = document.getElementById('emaill').value;
+    const senha = document.getElementById('password').value;
+    const senhaConfirmacao = document.getElementById('passwordConfirmation').value;
+    const h1 = document.getElementById('meuParagrafo');
+
+    // Verificar se o email é válido e foi preenchido
+    if (!email) {
+        h1.textContent = 'Por favor, coloque um email.';
+        limparCampos(false, true); // Limpa apenas o campo de email
+        return false;
+    } else if (!validarEmail(email)) {
+        h1.textContent = 'O email não é válido.';
+        limparCampos(false, true); // Limpa apenas o campo de email
+        return false;
+    }
+
+    // Verificar se a senha foi preenchida
+    if (!senha) {
+        h1.textContent = 'Por favor, insira uma senha.';
+        limparCampos(true, false); // Limpa apenas o campo de senha
+        return false;
+    }
+
+    // Verificar se as senhas coincidem
+    if (senha !== senhaConfirmacao) {
+        h1.textContent = 'A senha não confere.';
+        limparCampos(true, false); // Limpa apenas o campo de senha
+        return false;
+    }
+
+    // Se todas as verificações passarem, o formulário é válido
+    h1.textContent = 'Registrado com sucesso!';
+    limparCampos(true, true); // Limpa todos os campos
+    return true;
+}
+
+// Adicionando um event listener para chamar a função validarFormulario() quando o formulário for submetido
+document.getElementById('inputRegis').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita o envio automático do formulário
+    validarFormulario();
 });
