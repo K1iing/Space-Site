@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 body {
     margin: 0;
     overflow: hidden;
@@ -13,7 +14,6 @@ body {
 .jupiter {
     background-image: url(./background.png);
     width: 100%;
-
     background-size: cover;
     background-position: start;
     background-repeat: no-repeat;
@@ -52,34 +52,22 @@ h1 {
     transition: flex 0.8s ease;
 
 
-    
+
 }
+
 .item:hover {
     flex: 7;
 }
+
 .item-1 {
-    background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
+    
     border-radius: 5px 0px 0px 5px;
 
 }
 
-.item-2 {
-    background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
 
-}
-
-.item-3 {
-    background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
-
-}
-
-.item-4 {
-    background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
-
-}
 
 .item-5 {
-    background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
+    
     border-radius: 0px 5px 5px 0px;
 }
-
