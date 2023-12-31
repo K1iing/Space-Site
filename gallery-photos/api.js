@@ -26,26 +26,25 @@ async function fetchRandomImages() {
 
 window.onload = fetchRandomImages;
 
-    // JavaScript para mudar a cor
-    const h1 = document.getElementById('color-changing');
+// JavaScript para mudar a cor
+const h1 = document.getElementById('color-changing');
 
-    // Função para gerar um valor RGB aleatório
-    function getRandomColor() {
-      const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-      return color;
-    }
+// Função para gerar um valor RGB aleatório
+function getRandomColor() {
+  const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  return color;
+}
 
-    // Função para atualizar a cor do h1
-    function changeColor() {
-      const newColor = getRandomColor();
-      h1.style.color = newColor;
-    }
+// Função para atualizar a cor do h1
+function changeColor() {
+  const newColor = getRandomColor();
+  h1.style.color = newColor;
+}
 
-    // Mudança de cor a cada 2 segundos (2000 milissegundos)
-    setInterval(changeColor, 2000);
+// Mudança de cor a cada 2 segundos (2000 milissegundos)
+setInterval(changeColor, 2000);
 
-    function refreshPage() {
-      location.reload();
-    }
+function refreshPage() {
+  location.reload();
+}
 
-    
