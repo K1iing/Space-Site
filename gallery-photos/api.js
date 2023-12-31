@@ -42,4 +42,10 @@ window.onload = fetchRandomImages;
     }
 
     // Mudança de cor a cada 2 segundos (2000 milissegundos)
-    setInterval(changeColor, 500);
+    setInterval(changeColor, 2000);
+
+    function refreshPage() {
+      location.reload();
+    }
+
+    

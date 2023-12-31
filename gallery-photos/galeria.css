@@ -35,7 +35,13 @@ h1 {
     text-transform: uppercase;
     color: #fff;
     animation: flutuar 5s ease-in-out infinite;
-  }
+    cursor: pointer;
+    animation: changeColor 3s infinite; /* Aplica a animação */
+}
+
+/* Definição da animação */
+
+  
   
 
   @keyframes flutuar {
